@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Home</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link href = "css/bootstrap.min.css" rel = "stylesheet">
+                <link href = "css/style.css" rel = "stylesheet">
+                <link href = "js/bootstrap.min.js" rel = "stylesheet">
+        </head>
+        <body>
+ <!----Menu bar---->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <a  href="index.html" class="navbar-brand">ATM </a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class=" nav navbar-nav navbar-right">
+                       <li><a href="#contact" data-toggle="modal">Contact us</a></li>
+                    </ul>
+                 </div>
+            </div>
+         </div>
+ <!----End of menu--->
+ 
+	<!---Jumbotron--->
+            <div class="container">
+                <div class="jumbotron">
+                <div class="modal-content">
+                    <form action="sys_login.jsp" method="post" class="form-horizontal">
+                        <div class="modal-header">
+                            <h4>Secure Login modal</h4>
+                        </div>
+                            <div class="modal-body">
+
+                                <div class="form-group">
+                                    <label for="contact-email" class="col-lg-2 control-label">Username<span id="error">*</span></label>
+                                    <div class="col-lg-10">
+                                    <input type="email" class="form-control" name="email" id="contact-email" placeholder="you@example.com" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-name" class="col-lg-2 control-label">Password<span id="error">*</span></label>
+                                    <div class="col-lg-10">
+                                    <input type="password" class="form-control" name="password" id="contact-name" placeholder="Password" />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                            <input type="reset" value="clear" class="btn btn-default" >								
+                            <input type="submit" value="submit" class="btn btn-primary" >No account
+                            <a href="register.html" class="btn btn-primary" >Sign up</a>
+                            </div>
+
+                    </form>
+                </div>
+                </div>
+            </div>
+	<!---End of Jumbotron--->
+				
+				
+	<!--Footer--->
+                <div class="navbar navbar-default navbar-fixed-bottom">
+                    <div class="container">
+                    <p class="navbar-text pull-left">&copy; Festus Langat</p>
+                    <a href = "#" class = "navbar-btn btn-danger btn pull-right">YouTube</a>
+                    </div>
+                </div>
+	<!---End of footer--->
+	
+	<!--Contact modal--->
+                <div class="modal fade" id="contact" role ="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <form class="form-horizontal">
+                                <div class="modal-header">
+                                    <h4>Contact infotmatic</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="contact-name" class="col-lg-2 control-label">Name<span id="error">*</span></label>
+                                        <div class="col-lg-10">
+                                        <input type="text" class="form-control" id="contact-name" placeholder="Full name" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-email" class="col-lg-2 control-label">Email<span id="error">*</span></label>
+                                        <div class="col-lg-10">
+                                        <input type="email" class="form-control" id="contact-email" placeholder="you@example.com" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="contact-msg" class="col-lg-2 control-label">Message<span id="error">*</span></label>
+                                        <div class="col-lg-10">
+                                        <textarea class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                <a href="#"><input type="reset" value="Clear"class="btn btn-default"></a>
+
+                                <a href="#"><input type="submit" value="submit"class="btn btn-primary"></a>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+	<!--End of contact modal-->
+				
+				<!--sign up modal--->
+				<div class="modal fade" id="signup" role ="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<form class="form-horizontal" action="" method="post" onsubmit="return checkform()">
+								<div class="modal-header">
+									<h4>Kindly Enter bellow details.</h4>
+								</div><style> #error{color:red;}</style>
+								<div class="modal-body">
+									<div class="form-group">
+										<label for="contact-name" class="col-lg-2 control-label">Name<span id="error">*</span></label>
+										<div class="col-lg-10">
+										<input type="text" class="form-control" name="fname" id="contact-name" placeholder="Full name" required />
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="contact-name" class="col-lg-2 control-label">Moble number<span id="error">*</span></label>
+										<div class="col-lg-10">
+										<input type="number" class="form-control" name="phone" id="contact-name" placeholder="e.g 07**********" required />
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="contact-email" class="col-lg-2 control-label">Email<span id="error">*</span></label>
+										<div class="col-lg-10">
+										<input type="email" class="form-control" name="email" id="contact-email" placeholder="you@example.com" required />
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="contact-name" class="col-lg-2 control-label">Username<span id="error">*</span></label>
+										<div class="col-lg-10">
+										<input type="text" class="form-control" name="usname" id="contact-name" placeholder="Username" required />
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="contact-name" class="col-lg-2 control-label">Password<span id="error">*</span></label>
+										<div class="col-lg-10">
+										<input type="text" class="form-control" name="password" id="contact-name" placeholder="Password" required />
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="contact-name" class="col-lg-2 control-label">Re-ente Password<span id="error">*</span></label>
+										<div class="col-lg-10">
+										<input type="text" class="form-control" name="password" name="epassword" id="contact-name" placeholder="Enter-Password" required />
+										</div>
+									</div>
+									
+									
+								</div>
+								
+								<div class="modal-footer">
+								<a href="#" class="btn btn-warning" data-dismiss="modal">Close</a>
+								<a href="#"><input type="reset" value="Clear"class="btn btn-default"></a>
+								
+								<a href="#"><input type="submit" value="submit"class="btn btn-primary"></a>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				
+				</div>
+				<!--End of Sign up modal-->
+                <script src = "js/jquery-1.11.2.min.js"></script>
+				<script src = "js/jquery.min.js"></script>
+                <script src = "js/bootstrap.js"></script>
+               
+        </body>
+</html>
